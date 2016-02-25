@@ -17,9 +17,9 @@ class Color(object):
             color = hex_to_rgb(color)
         elif isinstance(color, Color):
             color = (color.r, color.g, color.b)
-        self.r = self.red = color[RED]
-        self.g = self.green = color[GREEN]
-        self.b = self.blue = color[BLUE]
+        self.r = self.red = int(color[RED])
+        self.g = self.green = int(color[GREEN])
+        self.b = self.blue = int(color[BLUE])
     
     def __iter__(self):
         for v in self.to_rgb():
